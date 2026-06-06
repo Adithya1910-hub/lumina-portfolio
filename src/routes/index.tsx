@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-function Index() {
+export function Index() {
   useEffect(() => {
     // ---------- Loader ----------
     const loader = document.getElementById("loader");
@@ -296,7 +296,7 @@ function Index() {
             <div className="hero__cta reveal">
               <a className="btn btn--primary" href="#projects">View Projects →</a>
               <a className="btn btn--ghost" href="#contact">Get in Touch</a>
-              <a className="btn btn--ghost" href="/certificates/resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
+              <a className="btn btn--ghost" href={`${import.meta.env.BASE_URL}certificates/resume.pdf`} target="_blank" rel="noreferrer">View Resume</a>
             </div>
             <div className="hero__stats reveal">
               <div><span className="count" data-count="4">0</span><small>Projects</small></div>
